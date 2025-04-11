@@ -2,35 +2,26 @@
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "TerminalRenderer.hpp"
+#include "CommandManager.hpp"
+#include "InputHandler.hpp"
+#include "History.hpp"
 
 class Terminal
 {
 public:
 	Terminal();
-	~Terminal();
 	void Run();
 
 private:
-	sf::RenderWindow m_window;
-	sf::Font m_font;
-	sf::Text m_text;
-	sf::Text m_historyText;
-	sf::Text m_typeText;
-	sf::Text m_inputText;
-	std::string m_input;
-	std::vector<std::string> m_history;
-	std::string m_prompt = "MoodTerminal>";
-	int m_historyIndex;
-	int m_historySize = 1;
-	int m_topDistance = 10;
-	int m_typeAt = 0;
+	sf::RenderWindow m_window;	
 
-	void ProcessInput();
-	void Draw();
-	void Update();
-	void PolleEvents();
-	void ExecuteCommand(const std::string& command);
-	void AddToHistory(const std::string& command);
-	void AddCharacter(char character, int index);
+	void WindowInit();
+	sf::Font FontInit();
+
+	std::shared_ptr<History> m_historyManager;
+	std::shared_ptr<TerminalRenderer> m_terminalRenderer;
+	std::shared_ptr<CommandManager> m_commandManager;
+	std::shared_ptr<InputHandler> m_inputHandler;
 };
 
