@@ -1,7 +1,7 @@
 #include "InputHandler.hpp"
 
-InputHandler::InputHandler(sf::RenderWindow& window, History& historyManager, CommandManager& commandManager, TerminalRenderer& terminalRenderer)
-	: m_window(window), m_historyManager(historyManager), m_commandManager(commandManager), m_terminalRenderer(terminalRenderer)
+InputHandler::InputHandler(sf::RenderWindow& window, History& historyManager, CommandManager& commandManager, TerminalRenderer& terminalRenderer, AudioManager& audioManager)
+	: m_window(window), m_historyManager(historyManager), m_commandManager(commandManager), m_terminalRenderer(terminalRenderer), m_audioManager(audioManager)
 {
 }
 
@@ -23,6 +23,8 @@ void InputHandler::PolleEvents()
 					m_commandManager.ExecuteCommand(m_input);
 					m_input.clear();
 					m_cursorPos = 0;
+
+					m_audioManager.PlaySound("enter");
 				}
 			}
 			else if (event.text.unicode == 27) // Escape
@@ -32,6 +34,7 @@ void InputHandler::PolleEvents()
 				m_cursorPos++;
 			}
 
+			m_audioManager.PlaySound("typing");
 			m_terminalRenderer.ResetCursorBlinkTime();
 		}
 		else if (event.type == sf::Event::KeyPressed)
@@ -47,6 +50,7 @@ void InputHandler::PolleEvents()
 			if (event.key.code == sf::Keyboard::Down)
 				break;
 
+			m_audioManager.PlaySound("typing");
 			m_terminalRenderer.ResetCursorBlinkTime();
 		}
 	}

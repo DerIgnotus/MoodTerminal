@@ -9,6 +9,7 @@
 #include "History.hpp"
 #include "MoodManager.hpp"
 #include "AnimationManager.hpp"
+#include "AudioManager.hpp"
 
 class Terminal
 {
@@ -27,5 +28,6 @@ private:
 	std::shared_ptr<CommandManager> m_commandManager;
 	std::shared_ptr<InputHandler> m_inputHandler;
 	std::shared_ptr<MoodManager> m_moodManager;
+	std::shared_ptr<AudioManager> m_audioManager;
 };
 

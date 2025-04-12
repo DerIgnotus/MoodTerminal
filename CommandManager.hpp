@@ -6,16 +6,19 @@
 #include <sstream>
 #include <string>
 #include <algorithm>
+#include <ctime>
+#include <chrono>
 
 #include "History.hpp"
 #include "MoodManager.hpp"
 #include "AnimationManager.hpp"
+#include "AudioManager.hpp"
 
 
 class CommandManager
 {
 public:
-	CommandManager(History& historyManager, MoodManager& moodManager, AnimationManager& animationManager);
+	CommandManager(History& historyManager, MoodManager& moodManager, AnimationManager& animationManager, AudioManager& audioManager);
 	void ExecuteCommand(const std::string& command);
 
 private:
@@ -25,6 +28,7 @@ private:
 	History& m_historyManager;
 	MoodManager& m_moodManager;
 	AnimationManager& m_animationManager;
+	AudioManager m_audioManager;
 
 	std::vector<std::string> SplitInput(const std::string& input);
 
@@ -34,6 +38,7 @@ private:
 	void Mood(std::vector<std::string>& args);
 	void MoodList(std::vector<std::string>& args);
 	void Print(std::vector<std::string>& args);
+	void Time(std::vector<std::string>& args);
 
 	void Error(const std::string& message);
 };

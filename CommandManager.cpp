@@ -1,7 +1,7 @@
 #include "CommandManager.hpp"
 
-CommandManager::CommandManager(History& historyManager, MoodManager& moodManager, AnimationManager& animationManager) 
-	: m_historyManager(historyManager), m_moodManager(moodManager), m_animationManager(animationManager)
+CommandManager::CommandManager(History& historyManager, MoodManager& moodManager, AnimationManager& animationManager, AudioManager& audioManager) 
+	: m_historyManager(historyManager), m_moodManager(moodManager), m_animationManager(animationManager), m_audioManager(audioManager)
 {
 	m_commands.push_back("help");
 	m_commandDescriptions.push_back("Displays the list of available commands.");
@@ -20,6 +20,9 @@ CommandManager::CommandManager(History& historyManager, MoodManager& moodManager
 	
 	m_commands.push_back("print");
 	m_commandDescriptions.push_back("Prints the provided text to the terminal.");
+
+	m_commands.push_back("time");
+	m_commandDescriptions.push_back("Displays the current time.");
 }
 
 void CommandManager::ExecuteCommand(const std::string& command)
@@ -52,9 +55,11 @@ void CommandManager::ExecuteCommand(const std::string& command)
 	else if (mainCommand == "print") {
 		Print(arguments);
 	}
+	else if (mainCommand == "time") {
+		Time(arguments);
+	}
 	else {
-		std::cout << "Unknown command: " << mainCommand << std::endl;
-		m_historyManager.AddToHistory("Unknown command: " + mainCommand);
+		Error("Unknown command: " + mainCommand);
 	}
 
 	m_historyManager.AddToHistory("\n");
@@ -187,8 +192,38 @@ void CommandManager::Print(std::vector<std::string>& args)
 	m_historyManager.AddToHistory(text);
 }
 
+void CommandManager::Time(std::vector<std::string>& args)
+{
+	if (!args.empty()) {
+		std::cout << "Time command does not accept any arguments." << std::endl;
+		Error("Time command does not accept any arguments.");
+		return;
+	}
+
+	std::time_t t = std::time(0);  
+	std::tm* now = std::localtime(&t);
+
+	std::ostringstream timeString;
+	timeString
+		<< (now->tm_mday) << '-'                // Day of the month
+		<< (now->tm_mon + 1) << '-'             // Month (tm_mon is 0-11, so add 1)
+		<< (now->tm_year + 1900) << " "         // Year (tm_year is years since 1900)
+		<< (now->tm_hour) << ':'                // Hour
+		<< (now->tm_min) << ':'                 // Minute
+		<< (now->tm_sec);                       // Second
+
+	timeString.str();
+	std::string time = timeString.str();
+	
+	std::cout << "Current time: " << time << std::endl;
+	m_historyManager.AddToHistory("Current time: " + time);
+}
+
 void CommandManager::Error(const std::string& message)
 {
 	std::cerr << "Error: " << message << std::endl;
 	m_historyManager.AddToHistory("Error: " + message);
+
+	m_audioManager.PlaySound("error");
 }
+

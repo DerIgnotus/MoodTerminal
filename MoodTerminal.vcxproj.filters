@@ -19,6 +19,9 @@
     <Filter Include="Assets\Fonts">
       <UniqueIdentifier>{58f7999d-1f2f-4e88-a38a-1b2707046263}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets\Sounds">
+      <UniqueIdentifier>{829f8cb5-b5a0-44ed-b639-a65031c055e2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -43,6 +46,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AnimationManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -169,5 +175,25 @@
     <ClInclude Include="AnimationManager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AudioManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="C:\Users\Noah\Downloads\Error-Beep.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="C:\Users\Noah\Downloads\Press Enter.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="C:\Users\Noah\Downloads\Background Noise.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="C:\Users\Noah\Downloads\Startup-Sound.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="C:\Users\Noah\Downloads\Keyboard-Click.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
   </ItemGroup>
 </Project>
