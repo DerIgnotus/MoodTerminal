@@ -8,19 +8,22 @@
 #include <algorithm>
 
 #include "History.hpp"
+#include "MoodManager.hpp"
 
 
 
 class CommandManager
 {
 public:
-	CommandManager(History& historyManager);
+	CommandManager(History& historyManager, MoodManager& moodManager);
 	void ExecuteCommand(const std::string& command);
 
 private:
 	std::vector<std::string> m_commands;
+	std::vector<std::string> m_commandDescriptions;
 
 	History& m_historyManager;
+	MoodManager& m_moodManager;
 
 	std::vector<std::string> SplitInput(const std::string& input);
 
@@ -29,7 +32,6 @@ private:
 	void Exit(std::vector<std::string>& args);
 	void Mood(std::vector<std::string>& args);
 	void MoodList(std::vector<std::string>& args);
-	void SetMood(std::vector<std::string>& args);
 	void Print(std::vector<std::string>& args);
 
 	void Error(const std::string& message);

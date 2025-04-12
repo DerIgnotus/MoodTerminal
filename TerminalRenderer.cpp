@@ -15,10 +15,12 @@ void TerminalRenderer::Draw(const std::vector<std::string>& history, const std::
 	m_inputText.setString(input);
 	m_terminalText.setString(m_prompt);
 
+	SetOffset();
+
 	currentTextPos = DrawHistory(history, currentTextPos);
 
-	m_terminalText.setPosition(10, currentTextPos + m_topDistance); 
-	m_inputText.setPosition(m_terminalText.getGlobalBounds().left + m_terminalText.getGlobalBounds().width + 1, currentTextPos + m_topDistance); 
+	m_terminalText.setPosition(10, currentTextPos + m_topDistance - m_scrollOffset);
+	m_inputText.setPosition(m_terminalText.getGlobalBounds().left + m_terminalText.getGlobalBounds().width + 1, currentTextPos + m_topDistance - m_scrollOffset);
 
 	int cursorX = GetCursorPosition(cursorPos);
 
@@ -40,15 +42,17 @@ void TerminalRenderer::Draw(const std::vector<std::string>& history, const std::
 	m_window.display();
 }
 
+
+
 int TerminalRenderer::DrawHistory(const std::vector<std::string>& history, int& currentTextPos)
 {
 	for (int i = 0; i < history.size(); i++) {
 		m_historyText.setString(history[i]);
-		m_historyText.setPosition(10, i * 20 + m_topDistance);
+		m_historyText.setPosition(10, i * 16 + m_topDistance - m_scrollOffset);
 
 		m_window.draw(m_historyText);
 
-		currentTextPos += 20;
+		currentTextPos += 16;
 	}
 
 	return currentTextPos;
@@ -74,6 +78,18 @@ int TerminalRenderer::GetCursorPosition(int& cursorPos)
 	}
 
 	return cursorX;
+}
+
+void TerminalRenderer::SetOffset()
+{
+	int historySize = m_historyManager.GetHistorySize();
+
+	if (historySize > 20) {
+		m_scrollOffset = (historySize - 20) * 16 - 4;
+	}
+	else {
+		m_scrollOffset = 0;
+	}
 }
 
 void TerminalRenderer::TextInit()

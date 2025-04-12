@@ -1,14 +1,24 @@
 #include "CommandManager.hpp"
 
-CommandManager::CommandManager(History& historyManager) : m_historyManager(historyManager) 
+CommandManager::CommandManager(History& historyManager, MoodManager& moodManager) : m_historyManager(historyManager), m_moodManager(moodManager)
 {
 	m_commands.push_back("help");
+	m_commandDescriptions.push_back("Displays the list of available commands.");
+
 	m_commands.push_back("clear");
+	m_commandDescriptions.push_back("Clears the terminal screen.");
+
 	m_commands.push_back("exit");
+	m_commandDescriptions.push_back("Exits the terminal.");
+
 	m_commands.push_back("mood");
+	m_commandDescriptions.push_back("Gets the mood for the terminal.");
+
 	m_commands.push_back("moodlist");
-	m_commands.push_back("setmood");
+	m_commandDescriptions.push_back("Displays the list of available moods.");
+	
 	m_commands.push_back("print");
+	m_commandDescriptions.push_back("Prints the provided text to the terminal.");
 }
 
 void CommandManager::ExecuteCommand(const std::string& command)
@@ -26,22 +36,19 @@ void CommandManager::ExecuteCommand(const std::string& command)
 	std::cout << "Command: " << mainCommand << std::endl;
 
 	if (mainCommand == "help") {
-
+		Help(arguments);
 	}
 	else if (mainCommand == "clear") {
-
+		Clear(arguments);
 	}
 	else if (mainCommand == "exit") {
-
+		Exit(arguments);
 	}
 	else if (mainCommand == "mood") {
-
+		Mood(arguments);
 	}
 	else if (mainCommand == "moodlist") {
-
-	}
-	else if (mainCommand == "setmood") {
-
+		MoodList(arguments);
 	}
 	else if (mainCommand == "print") {
 		Print(arguments);
@@ -67,7 +74,100 @@ std::vector<std::string> CommandManager::SplitInput(const std::string& input) {
 
 void CommandManager::Help(std::vector<std::string>& args)
 {
+	if (args.size() > 1) {
+		std::cout << "Help command accepts only one argument." << std::endl;
+		Error("Help command accepts only one argument.");
+		return;
+	}
+	if (args.size() == 1) {
 
+		return;
+	}
+
+	std::cout << "Available commands:" << std::endl;
+	for (int i = 0; i < m_commands.size(); i++) {
+		std::string text = m_commands[i] + " - " + m_commandDescriptions[i];
+
+		std::cout << text << std::endl;
+		m_historyManager.AddToHistory(text);
+	}
+
+	m_historyManager.AddToHistory("\n");
+	m_historyManager.AddToHistory("For more information about each command, type HELP + command.");
+}
+
+void CommandManager::Clear(std::vector<std::string>& args)
+{
+	if (!args.empty()) {
+		std::cout << "Clear command does not accept any arguments." << std::endl;
+		Error("Clear command does not accept any arguments.");
+		return;
+	}
+
+	m_historyManager.ClearHistory();
+}
+
+void CommandManager::Exit(std::vector<std::string>& args)
+{
+	if (!args.empty()) {
+		std::cout << "Exit command does not accept any arguments." << std::endl;
+		Error("Exit command does not accept any arguments.");
+		return;
+	}
+
+	std::cout << "Exiting the terminal..." << std::endl;
+	m_historyManager.AddToHistory("Exiting the terminal...");
+
+	exit(0);
+}
+
+void CommandManager::Mood(std::vector<std::string>& args)
+{
+	if (args.size() > 1) {
+		std::cout << "Mood command accepts only one argument." << std::endl;
+		Error("Mood command accepts only one argument.");
+		return;
+	}
+
+	if (args.empty()) {
+		std::cout << "Current mood: " << m_moodManager.GetMood() << std::endl;
+		m_historyManager.AddToHistory("Current mood: " + m_moodManager.GetMood());
+		return;
+	}
+	
+	std::string moodBeforeChange = m_moodManager.GetMood();
+	
+	bool moodExists = m_moodManager.SetMood(args[0]);
+
+	if (moodBeforeChange != m_moodManager.GetMood()) {
+		std::cout << "Mood changed from " << moodBeforeChange << " to " << m_moodManager.GetMood() << std::endl;
+		m_historyManager.AddToHistory("Mood changed from " + moodBeforeChange + " to " + m_moodManager.GetMood());
+	}
+	else if (moodBeforeChange == m_moodManager.GetMood() && moodExists) {
+		std::cout << "Mood is already set to '" << args[0] << "'" << std::endl;
+		m_historyManager.AddToHistory("Mood is already set to '" + args[0] + "'");
+	}
+	else 
+	{
+		std::cout << "Mood '" << args[0] <<  "' doesn't exist!" << std::endl;
+		m_historyManager.AddToHistory("Mood '" + args[0] + "' doesn't exist!");
+	}
+}
+
+void CommandManager::MoodList(std::vector<std::string>& args)
+{
+	if (!args.empty()) {
+		std::cout << "MoodList command does not accept any arguments." << std::endl;
+		Error("MoodList command does not accept any arguments.");
+		return;
+	}
+	std::cout << "Available moods:" << std::endl;
+	m_historyManager.AddToHistory("Available moods:");
+
+	for (const auto& mood : m_moodManager.GetAvailableMoods()) {
+		std::cout << mood << std::endl;
+		m_historyManager.AddToHistory(mood);
+	}
 }
 
 void CommandManager::Print(std::vector<std::string>& args)

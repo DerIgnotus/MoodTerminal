@@ -16,6 +16,7 @@ private:
 	const float m_cursorBlinkTime = 0.5f;
 
 	float m_currentCursorBlinkTime = 0.5f;
+	int m_scrollOffset = 0;
 
 	sf::RenderWindow& m_window;
 	sf::Font m_font;
@@ -30,5 +31,6 @@ private:
 	void TextInit();
 	int DrawHistory(const std::vector<std::string>& history, int& currentTextPos);
 	int GetCursorPosition(int& cursorPos);
+	void SetOffset();
 };
 
