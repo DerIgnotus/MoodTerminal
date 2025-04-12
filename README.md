@@ -1,6 +1,6 @@
 <b> Mood Terminal </b>
 
-A Custom Terminal using C++ and SFML 
+A Custom Terminal using C++ and SFML. 
 Unfortunately I haven't added cmake or an executable yet, I will do that tho 
 
 What Mood Terminal offers:
