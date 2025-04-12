@@ -1,6 +1,7 @@
 #include "InputHandler.hpp"
 
-InputHandler::InputHandler(sf::RenderWindow& window, History& historyManager, CommandManager& commandManager) : m_window(window), m_historyManager(historyManager), m_commandManager(commandManager)
+InputHandler::InputHandler(sf::RenderWindow& window, History& historyManager, CommandManager& commandManager, TerminalRenderer& terminalRenderer)
+	: m_window(window), m_historyManager(historyManager), m_commandManager(commandManager), m_terminalRenderer(terminalRenderer)
 {
 }
 
@@ -30,6 +31,8 @@ void InputHandler::PolleEvents()
 				AddCharacter(static_cast<char>(event.text.unicode), m_cursorPos);
 				m_cursorPos++;
 			}
+
+			m_terminalRenderer.ResetCursorBlinkTime();
 		}
 		else if (event.type == sf::Event::KeyPressed)
 		{
@@ -43,6 +46,8 @@ void InputHandler::PolleEvents()
 				break;
 			if (event.key.code == sf::Keyboard::Down)
 				break;
+
+			m_terminalRenderer.ResetCursorBlinkTime();
 		}
 	}
 }

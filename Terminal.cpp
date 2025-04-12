@@ -7,7 +7,7 @@ Terminal::Terminal()
 	m_historyManager = std::make_unique<History>();
 	m_commandManager = std::make_unique<CommandManager>(*m_historyManager);
 	m_terminalRenderer = std::make_unique<TerminalRenderer>(m_window, *m_historyManager);
-	m_inputHandler = std::make_unique<InputHandler>(m_window, *m_historyManager, *m_commandManager);
+	m_inputHandler = std::make_unique<InputHandler>(m_window, *m_historyManager, *m_commandManager, *m_terminalRenderer);
 }
 
 void Terminal::Run()
