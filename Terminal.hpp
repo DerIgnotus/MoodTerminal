@@ -8,6 +8,7 @@
 #include "InputHandler.hpp"
 #include "History.hpp"
 #include "MoodManager.hpp"
+#include "AnimationManager.hpp"
 
 class Terminal
 {
@@ -20,6 +21,7 @@ private:
 
 	void WindowInit();
 
+	std::shared_ptr<AnimationManager> m_animationManager;
 	std::shared_ptr<History> m_historyManager;
 	std::shared_ptr<TerminalRenderer> m_terminalRenderer;
 	std::shared_ptr<CommandManager> m_commandManager;

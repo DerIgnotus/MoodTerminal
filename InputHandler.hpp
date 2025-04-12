@@ -16,6 +16,7 @@ public:
 	void PolleEvents();
 	std::string GetInput() const { return m_input; }
 	int GetCursorPos() const { return m_cursorPos; }
+
 private:
 	sf::RenderWindow& m_window;
 	std::string m_input;

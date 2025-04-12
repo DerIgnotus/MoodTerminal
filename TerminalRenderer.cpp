@@ -48,11 +48,11 @@ int TerminalRenderer::DrawHistory(const std::vector<std::string>& history, int& 
 {
 	for (int i = 0; i < history.size(); i++) {
 		m_historyText.setString(history[i]);
-		m_historyText.setPosition(10, i * 16 + m_topDistance - m_scrollOffset);
+		m_historyText.setPosition(10, i * 20 + m_topDistance - m_scrollOffset);
 
 		m_window.draw(m_historyText);
 
-		currentTextPos += 16;
+		currentTextPos += 20;
 	}
 
 	return currentTextPos;
@@ -85,7 +85,7 @@ void TerminalRenderer::SetOffset()
 	int historySize = m_historyManager.GetHistorySize();
 
 	if (historySize > 20) {
-		m_scrollOffset = (historySize - 20) * 16 - 4;
+		m_scrollOffset = (historySize - 20) * 20 - 8;
 	}
 	else {
 		m_scrollOffset = 0;
@@ -101,26 +101,26 @@ void TerminalRenderer::TextInit()
 
 	m_terminalText = sf::Text();
 	m_terminalText.setFont(m_font);
-	m_terminalText.setCharacterSize(16);
+	m_terminalText.setCharacterSize(20);
 	m_terminalText.setFillColor(sf::Color::White);
 	m_terminalText.setLetterSpacing(1);
 
 	m_historyText = sf::Text();
 	m_historyText.setFont(m_font);
-	m_historyText.setCharacterSize(16);
+	m_historyText.setCharacterSize(20);
 	m_historyText.setFillColor(sf::Color::White);
 	m_historyText.setLetterSpacing(1);
 
 	m_cursorText = sf::Text();
 	m_cursorText.setFont(m_font);
-	m_cursorText.setCharacterSize(16);
+	m_cursorText.setCharacterSize(20);
 	m_cursorText.setFillColor(sf::Color::White);
 	m_cursorText.setLetterSpacing(1);
 	m_cursorText.setString("|");
 
 	m_inputText = sf::Text();
 	m_inputText.setFont(m_font);
-	m_inputText.setCharacterSize(16);
+	m_inputText.setCharacterSize(20);
 	m_inputText.setFillColor(sf::Color::White);
 	m_inputText.setLetterSpacing(1);
 

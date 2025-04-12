@@ -1,6 +1,7 @@
 #include "CommandManager.hpp"
 
-CommandManager::CommandManager(History& historyManager, MoodManager& moodManager) : m_historyManager(historyManager), m_moodManager(moodManager)
+CommandManager::CommandManager(History& historyManager, MoodManager& moodManager, AnimationManager& animationManager) 
+	: m_historyManager(historyManager), m_moodManager(moodManager), m_animationManager(animationManager)
 {
 	m_commands.push_back("help");
 	m_commandDescriptions.push_back("Displays the list of available commands.");
@@ -25,8 +26,6 @@ void CommandManager::ExecuteCommand(const std::string& command)
 {
 	m_historyManager.AddToHistory("MoodTerminal>" + command);
 	
-
-
 	std::vector<std::string> commandParts = SplitInput(command);
 	std::string mainCommand = commandParts[0];
 	std::vector<std::string> arguments(commandParts.begin() + 1, commandParts.end());
@@ -105,6 +104,7 @@ void CommandManager::Clear(std::vector<std::string>& args)
 	}
 
 	m_historyManager.ClearHistory();
+	m_animationManager.StartClearScreenAnimation();
 }
 
 void CommandManager::Exit(std::vector<std::string>& args)

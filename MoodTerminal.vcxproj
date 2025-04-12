@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AnimationManager.cpp" />
     <ClCompile Include="CommandManager.cpp" />
     <ClCompile Include="History.cpp" />
     <ClCompile Include="InputHandler.cpp" />
@@ -191,6 +192,7 @@
     <Font Include="C:\Users\Noah\Downloads\JetBrainsMono-2.304\fonts\ttf\JetBrainsMonoNL-ThinItalic.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnimationManager.hpp" />
     <ClInclude Include="CommandManager.hpp" />
     <ClInclude Include="History.hpp" />
     <ClInclude Include="InputHandler.hpp" />

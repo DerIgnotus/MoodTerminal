@@ -9,13 +9,13 @@
 
 #include "History.hpp"
 #include "MoodManager.hpp"
-
+#include "AnimationManager.hpp"
 
 
 class CommandManager
 {
 public:
-	CommandManager(History& historyManager, MoodManager& moodManager);
+	CommandManager(History& historyManager, MoodManager& moodManager, AnimationManager& animationManager);
 	void ExecuteCommand(const std::string& command);
 
 private:
@@ -24,6 +24,7 @@ private:
 
 	History& m_historyManager;
 	MoodManager& m_moodManager;
+	AnimationManager& m_animationManager;
 
 	std::vector<std::string> SplitInput(const std::string& input);
 

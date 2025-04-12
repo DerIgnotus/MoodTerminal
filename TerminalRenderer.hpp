@@ -11,7 +11,7 @@ public:
 	void Draw(const std::vector<std::string>& history, const std::string& input, int cursorPos);
 	void ResetCursorBlinkTime() { m_currentCursorBlinkTime = m_cursorBlinkTime; }
 private:
-	const int m_topDistance = 10; 
+	const int m_topDistance = 8; 
 	const std::string m_prompt = "MoodTerminal>";
 	const float m_cursorBlinkTime = 0.5f;
 

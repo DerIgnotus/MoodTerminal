@@ -42,6 +42,9 @@
     <ClCompile Include="MoodManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AnimationManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Font Include="C:\Users\Noah\Downloads\JetBrainsMono-2.304\fonts\ttf\JetBrainsMono-ExtraBoldItalic.ttf">
@@ -161,6 +164,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MoodManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationManager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
