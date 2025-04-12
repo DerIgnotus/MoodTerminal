@@ -24,5 +24,7 @@ private:
 	History& m_historyManager;
 	
 	void TextInit();
+	int DrawHistory(const std::vector<std::string>& history, int& currentTextPos);
+	int GetCursorPosition(int& cursorPos);
 };
 

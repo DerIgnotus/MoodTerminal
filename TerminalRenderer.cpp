@@ -8,44 +8,19 @@ TerminalRenderer::TerminalRenderer(sf::RenderWindow& window, History& historyMan
 
 void TerminalRenderer::Draw(const std::vector<std::string>& history, const std::string& input, int cursorPos)
 {
-	m_window.clear(sf::Color::Color(10, 10, 10));
-
 	int currentTextPos = 0;
-	int historySize = history.size();
-
+	
+	m_window.clear(sf::Color::Color(10, 10, 10));
+	
 	m_inputText.setString(input);
 	m_terminalText.setString(m_prompt);
 
-	// Draw history
-	for (int i = 0; i < history.size(); i++) {
-		m_historyText.setString(history[i]);
-		m_historyText.setPosition(10, i * 20 + m_topDistance);
+	currentTextPos = DrawHistory(history, currentTextPos);
 
-		m_window.draw(m_historyText);
-		
-		currentTextPos += 20; // Increment position for next line
-	}
-
-	// Draw the prompt and user input text
 	m_terminalText.setPosition(10, currentTextPos + 25);
 	m_inputText.setPosition(m_terminalText.getGlobalBounds().left + m_terminalText.getGlobalBounds().width, currentTextPos + 25);
 
-	float cursorX = 5;
-
-	for (int i = 0; i < m_terminalText.getString().getSize(); i++) {
-		sf::Uint32 character = m_terminalText.getString()[i];
-		const sf::Glyph& glyph = m_font.getGlyph(character, m_terminalText.getCharacterSize(), false);
-		cursorX += glyph.advance;
-	}
-
-	for (int i = 0; i < m_inputText.getString().getSize(); i++) {
-		if (i < cursorPos)
-		{
-			sf::Uint32 character = m_inputText.getString()[i];
-			const sf::Glyph& glyph = m_font.getGlyph(character, m_inputText.getCharacterSize(), false);
-			cursorX += glyph.advance;
-		}
-	}
+	int cursorX = GetCursorPosition(cursorPos);
 
 	// Set the position of the cursor
 	m_cursorText.setPosition(cursorX, m_terminalText.getPosition().y);
@@ -92,6 +67,40 @@ void TerminalRenderer::TextInit()
 
 	m_historyText.setString("Welcome to the Mood Terminal!");
 	m_historyManager.AddToHistory(m_historyText.getString());
+}
 
-	std::cout << "test" << std::endl;
+int TerminalRenderer::DrawHistory(const std::vector<std::string>& history, int& currentTextPos)
+{
+	for (int i = 0; i < history.size(); i++) {
+		m_historyText.setString(history[i]);
+		m_historyText.setPosition(10, i * 20 + m_topDistance);
+
+		m_window.draw(m_historyText);
+
+		currentTextPos += 20;
+	}
+
+	return currentTextPos;
+}
+
+int TerminalRenderer::GetCursorPosition(int& cursorPos)
+{
+	int cursorX = 5;
+
+	for (int i = 0; i < m_terminalText.getString().getSize(); i++) {
+		sf::Uint32 character = m_terminalText.getString()[i];
+		const sf::Glyph& glyph = m_font.getGlyph(character, m_terminalText.getCharacterSize(), false);
+		cursorX += glyph.advance;
+	}
+
+	for (int i = 0; i < m_inputText.getString().getSize(); i++) {
+		if (i < cursorPos)
+		{
+			sf::Uint32 character = m_inputText.getString()[i];
+			const sf::Glyph& glyph = m_font.getGlyph(character, m_inputText.getCharacterSize(), false);
+			cursorX += glyph.advance;
+		}
+	}
+
+	return cursorX;
 }

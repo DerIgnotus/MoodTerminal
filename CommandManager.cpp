@@ -7,5 +7,5 @@ CommandManager::CommandManager(History& historyManager) : m_historyManager(histo
 
 void CommandManager::ExecuteCommand(const std::string& command)
 {
-	m_historyManager.AddToHistory(command);
+	m_historyManager.AddToHistory("MoodTerminal>" + command);
 }
