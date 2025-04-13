@@ -20,14 +20,12 @@ public:
 private:
 	sf::RenderWindow m_window;	
 
-	void WindowInit();
-
-	std::shared_ptr<AnimationManager> m_animationManager;
-	std::shared_ptr<History> m_historyManager;
-	std::shared_ptr<TerminalRenderer> m_terminalRenderer;
-	std::shared_ptr<CommandManager> m_commandManager;
-	std::shared_ptr<InputHandler> m_inputHandler;
-	std::shared_ptr<MoodManager> m_moodManager;
-	std::shared_ptr<AudioManager> m_audioManager;
+	std::unique_ptr<AudioManager> m_audioManager;
+	std::unique_ptr<AnimationManager> m_animationManager;
+	std::unique_ptr<History> m_historyManager;
+	std::unique_ptr<TerminalRenderer> m_terminalRenderer;
+	std::unique_ptr<CommandManager> m_commandManager;
+	std::unique_ptr<InputHandler> m_inputHandler;
+	std::unique_ptr<MoodManager> m_moodManager;
 };
 

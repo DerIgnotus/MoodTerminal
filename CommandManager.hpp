@@ -28,7 +28,7 @@ private:
 	History& m_historyManager;
 	MoodManager& m_moodManager;
 	AnimationManager& m_animationManager;
-	AudioManager m_audioManager;
+	AudioManager& m_audioManager;
 
 	std::vector<std::string> SplitInput(const std::string& input);
 
