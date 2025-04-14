@@ -1,7 +1,7 @@
 #include "CommandManager.hpp"
 
-CommandManager::CommandManager(History& historyManager, MoodManager& moodManager, AnimationManager& animationManager, AudioManager& audioManager) 
-	: m_historyManager(historyManager), m_moodManager(moodManager), m_animationManager(animationManager), m_audioManager(audioManager)
+CommandManager::CommandManager(History& historyManager, MoodManager& moodManager, AnimationManager& animationManager, AudioManager& audioManager, TerminalState& terminalState)
+	: m_historyManager(historyManager), m_moodManager(moodManager), m_animationManager(animationManager), m_audioManager(audioManager), m_terminalState(terminalState)
 {
 	m_commands.push_back("help");
 	m_commandDescriptions.push_back("Displays the list of available commands.");
@@ -23,6 +23,12 @@ CommandManager::CommandManager(History& historyManager, MoodManager& moodManager
 
 	m_commands.push_back("time");
 	m_commandDescriptions.push_back("Displays the current time.");
+
+	m_commands.push_back("pong");
+	m_commandDescriptions.push_back("Starts the pong game.");
+
+	m_commands.push_back("asciiwave");
+	m_commandDescriptions.push_back("Starts the ASCII wave animation.");
 }
 
 void CommandManager::ExecuteCommand(const std::string& command)
@@ -57,6 +63,12 @@ void CommandManager::ExecuteCommand(const std::string& command)
 	}
 	else if (mainCommand == "time") {
 		Time(arguments);
+	} 
+	else if (mainCommand == "pong") {
+		Pong(arguments);
+	}
+	else if (mainCommand == "asciiwave") {
+		AsciiWave(arguments);
 	}
 	else {
 		Error("Unknown command: " + mainCommand);
@@ -217,6 +229,28 @@ void CommandManager::Time(std::vector<std::string>& args)
 	
 	std::cout << "Current time: " << time << std::endl;
 	m_historyManager.AddToHistory("Current time: " + time);
+}
+
+void CommandManager::Pong(std::vector<std::string>& args)
+{
+	if (!args.empty()) {
+		std::cout << "Pong command does not accept any arguments." << std::endl;
+		Error("Pong command does not accept any arguments.");
+		return;
+	}
+
+	m_terminalState = TerminalState::PONG;
+}
+
+void CommandManager::AsciiWave(std::vector<std::string>& args)
+{
+	if (!args.empty()) {
+		std::cout << "AsciiWave command does not accept any arguments." << std::endl;
+		Error("AsciiWave command does not accept any arguments.");
+		return;
+	}
+
+	m_animationManager.StartAsciiWaveAnimation();
 }
 
 void CommandManager::Error(const std::string& message)

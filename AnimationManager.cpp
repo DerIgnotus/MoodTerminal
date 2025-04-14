@@ -1,6 +1,6 @@
 ﻿#include "AnimationManager.hpp"
 
-AnimationManager::AnimationManager(sf::RenderWindow& window) : m_window(window)
+AnimationManager::AnimationManager(sf::RenderWindow& window, TerminalState& terminalState) : m_window(window), m_terminalState(terminalState)
 {
     m_font.loadFromFile("Assets/Fonts/consolas.ttf");
     if (!m_font.loadFromFile("Assets/Fonts/consolas.ttf")) {
@@ -8,7 +8,6 @@ AnimationManager::AnimationManager(sf::RenderWindow& window) : m_window(window)
     }
 
 	m_animationText.setFont(m_font);
-
 
     m_splashArt = {
         "===============================",
@@ -23,34 +22,47 @@ AnimationManager::AnimationManager(sf::RenderWindow& window) : m_window(window)
 
 void AnimationManager::StartBootUpAnimation()
 {
-	m_isAnimationActive = true;
+	m_terminalState = TerminalState::ANIMATION;
 
-	while (m_isAnimationActive)
-	{
-		UpdateBootUpAnimation();
-	}
-
-	m_animationClock.restart();
-	m_animationProgress = 0.0f;
-	StartClearScreenAnimation();
+	m_activeAnimation = "startup";
 }
 
 void AnimationManager::StartClearScreenAnimation()
 {
-	m_isAnimationActive = true;
+    m_terminalState = TerminalState::ANIMATION;
+
+	m_activeAnimation = "clear";
+
     m_clearFrame = 0;
     m_clearMask = std::vector<std::vector<bool>>(rows, std::vector<bool>(cols, false));
+}
 
-	while (m_isAnimationActive)
-	{
-		UpdateClearScreenAnimation();
+void AnimationManager::StartAsciiWaveAnimation()
+{
+	m_terminalState = TerminalState::ANIMATION;
+	m_activeAnimation = "ascii_wave";
+}
+
+void AnimationManager::Update()
+{
+	m_window.clear(sf::Color(10, 10, 10)); 
+
+	if (m_activeAnimation == "startup") {
+		UpdateBootUpAnimation();
 	}
+	else if (m_activeAnimation == "clear") {
+		UpdateClearScreenAnimation();
+    } 
+    else if (m_activeAnimation == "ascii_wave") {
+		float time = m_asciiWaveClock.getElapsedTime().asSeconds();
+		DrawAsciiWave(time);
+    }
+
+    m_window.display();
 }
 
 void AnimationManager::UpdateBootUpAnimation()
 {
-    m_window.clear(sf::Color(10, 10, 10));
-
     int y = 100;
     for (const auto& line : m_splashArt) {
         m_animationText.setString(line);
@@ -72,16 +84,19 @@ void AnimationManager::UpdateBootUpAnimation()
     m_window.draw(m_animationText);
 
     if (m_animationProgress >= 100.0f) {
-        m_isAnimationActive = false;
-    }
+		m_activeAnimation = "";
 
-    m_window.display();
+		m_terminalState = TerminalState::TERMINAL;
+
+        m_animationClock.restart();
+        m_animationProgress = 0.0f;
+
+        StartClearScreenAnimation();
+    }
 }
 
 void AnimationManager::UpdateClearScreenAnimation()
 {
-    m_window.clear(sf::Color(10, 10, 10)); // Background color
-
     for (int y = 0; y < rows; ++y) {
         for (int x = 0; x < cols; ++x) {
             // Only draw if it's time for this cell
@@ -100,10 +115,32 @@ void AnimationManager::UpdateClearScreenAnimation()
 
     // Done when last diagonal finishes
     if (m_clearFrame > (cols + rows)) {
-        m_isAnimationActive = false;
+		m_activeAnimation = "";
+		m_terminalState = TerminalState::TERMINAL;
+
         m_clearMask.clear();
     }
-
-    m_window.display();
 }
+
+void AnimationManager::DrawAsciiWave(float time) {
+    sf::Text ch;
+    ch.setFont(m_font);
+    ch.setCharacterSize(18);
+    ch.setFillColor(sf::Color::White);
+
+    float spacingX = 10.f; // Smaller spacing
+    float spacingY = 8.f; // Keep some vertical distance
+    int cols = m_window.getSize().x / spacingX;
+    int rows = m_window.getSize().y / spacingY;
+
+    for (int x = 0; x < cols; ++x) {
+        float wave = std::sin(time * 4 / 1.2 + x * 0.1f);
+        int y = int((wave + 1.0f) * 0.5f * (rows - 1));
+        ch.setString("~");
+        ch.setPosition(x * spacingX, y * spacingY);
+        m_window.draw(ch);
+    }
+}
+
+
 

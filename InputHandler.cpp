@@ -1,7 +1,7 @@
 #include "InputHandler.hpp"
 
-InputHandler::InputHandler(sf::RenderWindow& window, History& historyManager, CommandManager& commandManager, TerminalRenderer& terminalRenderer, AudioManager& audioManager)
-	: m_window(window), m_historyManager(historyManager), m_commandManager(commandManager), m_terminalRenderer(terminalRenderer), m_audioManager(audioManager)
+InputHandler::InputHandler(sf::RenderWindow& window, History& historyManager, CommandManager& commandManager, TerminalRenderer& terminalRenderer, AudioManager& audioManager, TerminalState& terminalState)
+	: m_window(window), m_historyManager(historyManager), m_commandManager(commandManager), m_terminalRenderer(terminalRenderer), m_audioManager(audioManager), m_terminalState(terminalState)
 {
 }
 
@@ -27,8 +27,12 @@ void InputHandler::PolleEvents()
 					m_audioManager.PlaySound("enter");
 				}
 			}
-			else if (event.text.unicode == 27) // Escape
-				m_window.close();
+			else if (event.text.unicode == 27) { // Escape
+				if (m_terminalState == TerminalState::TERMINAL)
+					m_window.close();
+				else
+					m_terminalState = TerminalState::TERMINAL;
+			}
 			else if (event.text.unicode < 128) {
 				AddCharacter(static_cast<char>(event.text.unicode), m_cursorPos);
 				m_cursorPos++;
@@ -52,6 +56,24 @@ void InputHandler::PolleEvents()
 
 			m_audioManager.PlaySound("typing");
 			m_terminalRenderer.ResetCursorBlinkTime();
+		}
+	}
+}
+
+void InputHandler::StandartPollEvents()
+{
+	sf::Event event;
+
+	while (m_window.pollEvent(event)) {
+		if (event.type == sf::Event::Closed)
+			m_window.close();
+		else if (event.type == sf::Event::KeyPressed) {
+			if (event.key.code == sf::Keyboard::Escape) {
+				if (m_terminalState == TerminalState::TERMINAL)
+					m_window.close();
+				else
+					m_terminalState = TerminalState::TERMINAL;
+			}
 		}
 	}
 }

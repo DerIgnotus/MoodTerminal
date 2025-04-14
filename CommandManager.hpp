@@ -13,12 +13,12 @@
 #include "MoodManager.hpp"
 #include "AnimationManager.hpp"
 #include "AudioManager.hpp"
-
+#include "TerminalState.hpp"
 
 class CommandManager
 {
 public:
-	CommandManager(History& historyManager, MoodManager& moodManager, AnimationManager& animationManager, AudioManager& audioManager);
+	CommandManager(History& historyManager, MoodManager& moodManager, AnimationManager& animationManager, AudioManager& audioManager, TerminalState& terminalState);
 	void ExecuteCommand(const std::string& command);
 
 private:
@@ -30,6 +30,8 @@ private:
 	AnimationManager& m_animationManager;
 	AudioManager& m_audioManager;
 
+	TerminalState& m_terminalState;
+
 	std::vector<std::string> SplitInput(const std::string& input);
 
 	void Help(std::vector<std::string>& args);
@@ -39,6 +41,8 @@ private:
 	void MoodList(std::vector<std::string>& args);
 	void Print(std::vector<std::string>& args);
 	void Time(std::vector<std::string>& args);
+	void Pong(std::vector<std::string>& args);
+	void AsciiWave(std::vector<std::string>& args);
 
 	void Error(const std::string& message);
 };

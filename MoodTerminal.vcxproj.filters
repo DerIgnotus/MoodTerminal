@@ -178,6 +178,9 @@
     <ClInclude Include="AudioManager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TerminalState.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Media Include="C:\Users\Noah\Downloads\Error-Beep.wav">

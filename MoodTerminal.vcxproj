@@ -201,6 +201,7 @@
     <ClInclude Include="MoodManager.hpp" />
     <ClInclude Include="Terminal.hpp" />
     <ClInclude Include="TerminalRenderer.hpp" />
+    <ClInclude Include="TerminalState.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="C:\Users\Noah\Downloads\Background Noise.wav" />
