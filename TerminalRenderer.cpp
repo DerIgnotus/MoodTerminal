@@ -1,6 +1,7 @@
 #include "TerminalRenderer.hpp"
 
-TerminalRenderer::TerminalRenderer(sf::RenderWindow& window, History& historyManager) : m_window(window), m_historyManager(historyManager)
+TerminalRenderer::TerminalRenderer(sf::RenderWindow& window, History& historyManager, MoodManager& moodManager)
+	: m_window(window), m_historyManager(historyManager), m_moodManager(moodManager)
 {
 	TextInit();
 }
@@ -10,8 +11,8 @@ void TerminalRenderer::Draw(const std::vector<std::string>& history, const std::
 {
 	int currentTextPos = 0;
 	
-	m_window.clear(sf::Color::Color(10, 10, 10));
-	
+	m_window.clear(m_moodManager.GetBackgroundColor());
+
 	m_inputText.setString(input);
 	m_terminalText.setString(m_prompt);
 
@@ -41,6 +42,17 @@ void TerminalRenderer::Draw(const std::vector<std::string>& history, const std::
 
 	m_window.display();
 }
+
+void TerminalRenderer::Update()
+{
+	sf::Color m_textColor = m_moodManager.GetTextColor();
+
+	m_terminalText.setFillColor(m_textColor);
+	m_historyText.setFillColor(m_textColor);
+	m_cursorText.setFillColor(m_textColor);
+	m_inputText.setFillColor(m_textColor);
+}
+
 
 
 

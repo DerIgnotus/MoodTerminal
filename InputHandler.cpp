@@ -21,8 +21,11 @@ void InputHandler::PolleEvents()
 			else if (event.text.unicode == 13) { // Enter
 				if (!m_input.empty()) {
 					m_commandManager.ExecuteCommand(m_input);
+					m_historyManager.AddToHistoryCommands(m_input);
 					m_input.clear();
 					m_cursorPos = 0;
+
+					m_historyManager.SetHistoryCommandsIndex(0);
 
 					m_audioManager.PlaySound("enter");
 				}
@@ -50,9 +53,31 @@ void InputHandler::PolleEvents()
 				if (m_cursorPos < m_input.size())
 					m_cursorPos++;
 			if (event.key.code == sf::Keyboard::Up)
-				break;
+			{
+				if (m_historyManager.GetHistoryCommandsIndex() < m_historyManager.GetHistoryCommandsSize() - 1) // Prevent out-of-bounds
+				{
+					m_historyManager.SetHistoryCommandsIndex(m_historyManager.GetHistoryCommandsIndex() + 1);
+					m_input = m_historyManager.GetHistoryCommands()[m_historyManager.GetHistoryCommandsIndex()];
+
+					m_cursorPos = m_input.size();
+				}
+			}
 			if (event.key.code == sf::Keyboard::Down)
-				break;
+			{
+				if (m_historyManager.GetHistoryCommandsIndex() > 0) // Prevent out-of-bounds
+				{
+					m_historyManager.SetHistoryCommandsIndex(m_historyManager.GetHistoryCommandsIndex() - 1); // Decrement first
+					m_input = m_historyManager.GetHistoryCommands()[m_historyManager.GetHistoryCommandsIndex()];
+
+					m_cursorPos = m_input.size();
+				}
+				else
+				{
+					m_input.clear(); // Clear input if at the bottom of the history
+
+					m_cursorPos = m_input.size();
+				}
+			}
 
 			m_audioManager.PlaySound("typing");
 			m_terminalRenderer.ResetCursorBlinkTime();

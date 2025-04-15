@@ -6,11 +6,12 @@
 #include <string>
 
 #include "TerminalState.hpp"
+#include "MoodManager.hpp"
 
 class AnimationManager
 {
 public:
-	AnimationManager(sf::RenderWindow& window, TerminalState& terminalState);
+	AnimationManager(sf::RenderWindow& window, TerminalState& terminalState, MoodManager& moodManager);
 	void StartBootUpAnimation();
 	void StartClearScreenAnimation();
 	void StartAsciiWaveAnimation();
@@ -19,6 +20,8 @@ public:
 private:
 	sf::RenderWindow& m_window;
 	TerminalState& m_terminalState;
+
+	MoodManager& m_moodManager;
 
 	std::string m_activeAnimation;
 

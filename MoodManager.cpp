@@ -71,17 +71,31 @@ std::string MoodManager::MoodToString(MoodType mood)
 	switch (mood)
 	{
 	case HAPPY:
+		m_currentColorText = m_happyColorText;
+		m_currentColorBackground = m_happyColorBackground;
+
 		return "Happy";
 	case SAD:
+		m_currentColorText = m_sadColorText;
+		m_currentColorBackground = m_sadColorBackground;
+
 		return "Sad";
 	case ANGRY:
+		m_currentColorText = m_angryColorText;
+		m_currentColorBackground = m_angryColorBackground;
+
 		return "Angry";
 	case EXCITED:
+		m_currentColorText = m_excitedColorText;
+		m_currentColorBackground = m_excitedColorBackground;
+
 		return "Excited";
 	case NONE:
+		m_currentColorText = m_noneColorText;
+		m_currentColorBackground = m_noneColorBackground;
+
 		return "None";
 	default:
 		return "None";
 	}
-
 }

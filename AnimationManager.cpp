@@ -1,6 +1,7 @@
 ﻿#include "AnimationManager.hpp"
 
-AnimationManager::AnimationManager(sf::RenderWindow& window, TerminalState& terminalState) : m_window(window), m_terminalState(terminalState)
+AnimationManager::AnimationManager(sf::RenderWindow& window, TerminalState& terminalState, MoodManager& moodManager) 
+	: m_window(window), m_terminalState(terminalState), m_moodManager(moodManager)
 {
     m_font.loadFromFile("Assets/Fonts/consolas.ttf");
     if (!m_font.loadFromFile("Assets/Fonts/consolas.ttf")) {
@@ -45,7 +46,7 @@ void AnimationManager::StartAsciiWaveAnimation()
 
 void AnimationManager::Update()
 {
-	m_window.clear(sf::Color(10, 10, 10)); 
+	m_window.clear(m_moodManager.GetBackgroundColor()); 
 
 	if (m_activeAnimation == "startup") {
 		UpdateBootUpAnimation();
@@ -64,6 +65,9 @@ void AnimationManager::Update()
 void AnimationManager::UpdateBootUpAnimation()
 {
     int y = 100;
+
+	m_animationText.setFillColor(m_moodManager.GetTextColor());
+
     for (const auto& line : m_splashArt) {
         m_animationText.setString(line);
         m_animationText.setPosition(m_window.getSize().x / 2 - 275, y);
@@ -105,7 +109,7 @@ void AnimationManager::UpdateClearScreenAnimation()
 
                 sf::RectangleShape cell(sf::Vector2f(cellSize, cellSize));
                 cell.setPosition(x * cellSize, y * cellSize);
-                cell.setFillColor(sf::Color::White);
+                cell.setFillColor(m_moodManager.GetTextColor());
                 m_window.draw(cell);
             }
         }
@@ -126,7 +130,7 @@ void AnimationManager::DrawAsciiWave(float time) {
     sf::Text ch;
     ch.setFont(m_font);
     ch.setCharacterSize(18);
-    ch.setFillColor(sf::Color::White);
+    ch.setFillColor(m_moodManager.GetTextColor());
 
     float spacingX = 10.f; // Smaller spacing
     float spacingY = 8.f; // Keep some vertical distance

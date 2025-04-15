@@ -1,19 +1,26 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "History.hpp"
 #include <iostream>
+
+#include "History.hpp"
+#include "MoodManager.hpp"
+
 
 class TerminalRenderer
 {
 public:
-	TerminalRenderer(sf::RenderWindow& window, History& historyManager);
+	TerminalRenderer(sf::RenderWindow& window, History& historyManager, MoodManager& moodManager);
 
 	void Draw(const std::vector<std::string>& history, const std::string& input, int cursorPos);
 	void ResetCursorBlinkTime() { m_currentCursorBlinkTime = m_cursorBlinkTime; }
+	void Update();
+
 private:
 	const int m_topDistance = 8; 
 	const std::string m_prompt = "MoodTerminal>";
 	const float m_cursorBlinkTime = 0.5f;
+
+	MoodManager& m_moodManager;
 
 	float m_currentCursorBlinkTime = 0.5f;
 	int m_scrollOffset = 0;
