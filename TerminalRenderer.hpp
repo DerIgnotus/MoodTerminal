@@ -4,16 +4,18 @@
 
 #include "History.hpp"
 #include "MoodManager.hpp"
+#include "Pong.hpp"
 
 
 class TerminalRenderer
 {
 public:
-	TerminalRenderer(sf::RenderWindow& window, History& historyManager, MoodManager& moodManager);
+	TerminalRenderer(sf::RenderWindow& window, History& historyManager, MoodManager& moodManager, Pong& pongGame);
 
 	void Draw(const std::vector<std::string>& history, const std::string& input, int cursorPos);
 	void ResetCursorBlinkTime() { m_currentCursorBlinkTime = m_cursorBlinkTime; }
 	void Update();
+	void DrawPongGame();
 
 private:
 	const int m_topDistance = 8; 
@@ -21,6 +23,7 @@ private:
 	const float m_cursorBlinkTime = 0.5f;
 
 	MoodManager& m_moodManager;
+	Pong& m_pongGame;
 
 	float m_currentCursorBlinkTime = 0.5f;
 	int m_scrollOffset = 0;

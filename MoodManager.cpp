@@ -9,6 +9,27 @@ MoodManager::MoodManager()
 	std::cout << "Current mood: " << m_mood << std::endl;
 }
 
+void MoodManager::Update()
+{
+	if (m_currentMood == CRAZY)
+	{
+		float time = m_clock.getElapsedTime().asSeconds();
+
+		// Smooth color waves for text
+		int rText = static_cast<int>(std::sin(time * 2.0f) * 127 + 128);
+		int gText = static_cast<int>(std::sin(time * 3.0f + 2.0f) * 127 + 128);
+		int bText = static_cast<int>(std::sin(time * 1.5f + 4.0f) * 127 + 128);
+
+		// Inverted or offset colors for background to contrast
+		int rBg = 255 - rText;
+		int gBg = 255 - gText;
+		int bBg = 255 - bText;
+
+		m_currentColorText = sf::Color(rText, gText, bText);
+		m_currentColorBackground = sf::Color(rBg, gBg, bBg);
+	}
+}
+
 bool MoodManager::SetMood(std::string& mood)
 {
 	std::cout << "Setting mood to: " << mood << std::endl;
@@ -27,7 +48,7 @@ bool MoodManager::SetMood(std::string& mood)
 
 std::vector<std::string> MoodManager::GetAvailableMoods()
 {
-	return { "Happy", "Sad", "Angry", "Excited", "None" };
+	return { "Happy", "Sad", "Angry", "Excited", "Crazy", "None" };
 }
 
 bool MoodManager::StringToMood(std::string mood)
@@ -52,6 +73,11 @@ bool MoodManager::StringToMood(std::string mood)
 	else if (mood == "excited")
 	{
 		m_currentMood = EXCITED;
+		return true;
+	}
+	else if (mood == "crazy")
+	{
+		m_currentMood = CRAZY;
 		return true;
 	}
 	else if (mood == "none")
@@ -90,6 +116,9 @@ std::string MoodManager::MoodToString(MoodType mood)
 		m_currentColorBackground = m_excitedColorBackground;
 
 		return "Excited";
+	case CRAZY:
+		
+		return "Crazy";
 	case NONE:
 		m_currentColorText = m_noneColorText;
 		m_currentColorBackground = m_noneColorBackground;

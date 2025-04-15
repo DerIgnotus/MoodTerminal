@@ -11,6 +11,7 @@ class MoodManager
 {
 public: 
 	MoodManager();
+	void Update();
 	bool SetMood(std::string& mood);
 	std::string GetMood() { return m_mood; }
 	std::vector<std::string> GetAvailableMoods();
@@ -25,6 +26,7 @@ private:
 		SAD,
 		ANGRY,
 		EXCITED,
+		CRAZY,
 		NONE,
 	};
 
@@ -56,9 +58,10 @@ private:
 	sf::Color m_currentColorText = sf::Color(255, 255, 255);
 	sf::Color m_currentColorBackground = sf::Color(10, 10, 10);
 
-	
 
 	bool StringToMood(std::string mood);
 	std::string MoodToString(MoodType mood);
+
+	sf::Clock m_clock;
 };
 

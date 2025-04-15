@@ -154,6 +154,7 @@
     <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MoodManager.cpp" />
+    <ClCompile Include="Pong.cpp" />
     <ClCompile Include="Terminal.cpp" />
     <ClCompile Include="TerminalRenderer.cpp" />
   </ItemGroup>
@@ -199,6 +200,7 @@
     <ClInclude Include="History.hpp" />
     <ClInclude Include="InputHandler.hpp" />
     <ClInclude Include="MoodManager.hpp" />
+    <ClInclude Include="Pong.hpp" />
     <ClInclude Include="Terminal.hpp" />
     <ClInclude Include="TerminalRenderer.hpp" />
     <ClInclude Include="TerminalState.hpp" />

@@ -51,6 +51,9 @@
     <ClCompile Include="AudioManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Pong.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Font Include="C:\Users\Noah\Downloads\JetBrainsMono-2.304\fonts\ttf\JetBrainsMono-ExtraBoldItalic.ttf">
@@ -179,6 +182,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TerminalState.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pong.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

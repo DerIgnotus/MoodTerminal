@@ -1,7 +1,9 @@
 #include "InputHandler.hpp"
 
-InputHandler::InputHandler(sf::RenderWindow& window, History& historyManager, CommandManager& commandManager, TerminalRenderer& terminalRenderer, AudioManager& audioManager, TerminalState& terminalState)
-	: m_window(window), m_historyManager(historyManager), m_commandManager(commandManager), m_terminalRenderer(terminalRenderer), m_audioManager(audioManager), m_terminalState(terminalState)
+InputHandler::InputHandler(sf::RenderWindow& window, History& historyManager, CommandManager& commandManager, TerminalRenderer& terminalRenderer, 
+	AudioManager& audioManager, TerminalState& terminalState, Pong& pongGame)
+	: m_window(window), m_historyManager(historyManager), m_commandManager(commandManager), m_terminalRenderer(terminalRenderer), 
+	m_audioManager(audioManager), m_terminalState(terminalState), m_pongGame(pongGame)
 {
 }
 
@@ -100,6 +102,33 @@ void InputHandler::StandartPollEvents()
 					m_terminalState = TerminalState::TERMINAL;
 			}
 		}
+	}
+}
+
+void InputHandler::PongPollEvents()
+{
+	sf::Event event;
+	while (m_window.pollEvent(event)) {
+		if (event.type == sf::Event::Closed)
+			m_window.close();
+		else if (event.type == sf::Event::KeyPressed) {
+			if (event.key.code == sf::Keyboard::Escape) {
+				m_terminalState = TerminalState::TERMINAL;
+			}
+		}
+	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+		m_pongGame.MovePaddle1(-1);
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+		m_pongGame.MovePaddle1(1);
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+		m_pongGame.MovePaddle2(-1);
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+		m_pongGame.MovePaddle2(1);
 	}
 }
 

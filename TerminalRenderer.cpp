@@ -1,7 +1,7 @@
 #include "TerminalRenderer.hpp"
 
-TerminalRenderer::TerminalRenderer(sf::RenderWindow& window, History& historyManager, MoodManager& moodManager)
-	: m_window(window), m_historyManager(historyManager), m_moodManager(moodManager)
+TerminalRenderer::TerminalRenderer(sf::RenderWindow& window, History& historyManager, MoodManager& moodManager, Pong& pongGame)
+	: m_window(window), m_historyManager(historyManager), m_moodManager(moodManager), m_pongGame(pongGame)
 {
 	TextInit();
 }
@@ -53,8 +53,25 @@ void TerminalRenderer::Update()
 	m_inputText.setFillColor(m_textColor);
 }
 
+void TerminalRenderer::DrawPongGame()
+{
+	m_window.clear(m_moodManager.GetBackgroundColor());
+
+	m_pongGame.GetBall().setFillColor(m_moodManager.GetTextColor());
+	m_pongGame.GetPaddle1().setFillColor(m_moodManager.GetTextColor());
+	m_pongGame.GetPaddle2().setFillColor(m_moodManager.GetTextColor());
+	m_pongGame.GetScoreText1().setFillColor(m_moodManager.GetTextColor());
+	m_pongGame.GetScoreText2().setFillColor(m_moodManager.GetTextColor());
 
 
+	m_window.draw(m_pongGame.GetScoreText1());
+	m_window.draw(m_pongGame.GetScoreText2());
+	m_window.draw(m_pongGame.GetPaddle1());
+	m_window.draw(m_pongGame.GetPaddle2());
+	m_window.draw(m_pongGame.GetBall());
+
+	m_window.display();
+}
 
 int TerminalRenderer::DrawHistory(const std::vector<std::string>& history, int& currentTextPos)
 {

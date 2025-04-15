@@ -9,13 +9,15 @@
 #include "TerminalRenderer.hpp"
 #include "AudioManager.hpp"
 #include "TerminalState.hpp"
+#include "Pong.hpp"
 
 class InputHandler
 {
 public:
-	InputHandler(sf::RenderWindow& window, History& historyManager, CommandManager& commandManager, TerminalRenderer& terminalRenderer, AudioManager& audioManager, TerminalState& terminalState);
+	InputHandler(sf::RenderWindow& window, History& historyManager, CommandManager& commandManager, TerminalRenderer& terminalRenderer, AudioManager& audioManager, TerminalState& terminalState, Pong& pongGame);
 	void PolleEvents();
 	void StandartPollEvents();
+	void PongPollEvents();
 	std::string GetInput() const { return m_input; }
 	int GetCursorPos() const { return m_cursorPos; }
 
@@ -31,6 +33,7 @@ private:
 	TerminalRenderer& m_terminalRenderer;
 	AudioManager& m_audioManager;
 	TerminalState& m_terminalState;
+	Pong& m_pongGame;
 
 
 
