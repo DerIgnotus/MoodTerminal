@@ -4,7 +4,7 @@ A Custom Terminal using C++ and SFML.
 Unfortunately I haven't added cmake or an executable yet, I will do that tho 
 
 What Mood Terminal offers:
-- startup and clear animations
+- fun little animations
 - sounds
 - background noise
 - commands like: help, print, time, exit, moodlist, mood, asciiwave ...
