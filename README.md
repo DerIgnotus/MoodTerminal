@@ -9,5 +9,6 @@ What Mood Terminal offers:
 - background noise
 - commands like: help, print, time, exit, moodlist, mood, asciiwave ...
 - colors of the Terminal change depending on the mood
+- Playable Pong Game
 
 (If I updated things, like added cmake, and forgot to update the readme, pls do a pull request or issue or something so I know about it. Thanks! :))
