@@ -23,6 +23,7 @@ void Terminal::Run()
 
 	while (m_window.isOpen()) {
 		m_moodManager->Update();
+		m_commandManager->Update();
 
 		switch (m_terminalState)
 		{

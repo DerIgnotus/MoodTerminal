@@ -1,8 +1,11 @@
 #include "CommandManager.hpp"
 
 CommandManager::CommandManager(History& historyManager, MoodManager& moodManager, AnimationManager& animationManager, AudioManager& audioManager, TerminalState& terminalState)
-	: m_historyManager(historyManager), m_moodManager(moodManager), m_animationManager(animationManager), m_audioManager(audioManager), m_terminalState(terminalState)
+	: m_historyManager(historyManager), m_moodManager(moodManager), m_animationManager(animationManager), m_audioManager(audioManager), m_terminalState(terminalState),
+	m_randomMoodChangeTime(static_cast<float>(rand() % 21 + 10)) // Random time between 10 and 30
 {
+	gen = std::mt19937(rd()); // Initialize the random number generator
+
 	m_commands.push_back("help");
 	m_commandDescriptions.push_back("Displays the list of available commands.");
 
@@ -14,6 +17,9 @@ CommandManager::CommandManager(History& historyManager, MoodManager& moodManager
 
 	m_commands.push_back("mood");
 	m_commandDescriptions.push_back("Gets the mood for the terminal.");
+
+	m_commands.push_back("moodvirus");
+	m_commandDescriptions.push_back("Randomly changes the mood of the terminal.");
 
 	m_commands.push_back("moodlist");
 	m_commandDescriptions.push_back("Displays the list of available moods.");
@@ -58,6 +64,9 @@ void CommandManager::ExecuteCommand(const std::string& command)
 	else if (mainCommand == "mood") {
 		Mood(arguments);
 	}
+	else if (mainCommand == "moodvirus") {
+		MoodVirus(arguments);
+	}
 	else if (mainCommand == "moodlist") {
 		MoodList(arguments);
 	}
@@ -81,6 +90,27 @@ void CommandManager::ExecuteCommand(const std::string& command)
 	}
 
 	m_historyManager.AddToHistory("\n");
+}
+
+void CommandManager::Update()
+{
+	if (m_virusActivated) {
+		m_randomMoodChangeTime -= 0.04f; // Decrease the time until the next mood change
+		if (m_randomMoodChangeTime <= 0) {
+			std::string mood = m_moodManager.GetMood();
+
+			while (mood == m_moodManager.GetMood()) {
+				std::uniform_int_distribution<> distrib(0, m_moodManager.GetAvailableMoods().size() - 1);
+				int randomMoodIndex = distrib(gen);
+
+				m_moodManager.SetMood(m_moodManager.GetAvailableMoods()[randomMoodIndex]);
+			}
+
+			m_historyManager.AddToHistory("Mood Virus changed the mood from '" + mood + "' to '" + m_moodManager.GetMood() + "'");
+
+			m_randomMoodChangeTime = static_cast<float>(rand() % 21 + 10); // Reset to a new random time between 10 and 30
+		}
+	}
 }
 
 std::vector<std::string> CommandManager::SplitInput(const std::string& input) {
@@ -175,6 +205,17 @@ void CommandManager::Mood(std::vector<std::string>& args)
 		std::cout << "Mood '" << args[0] <<  "' doesn't exist!" << std::endl;
 		m_historyManager.AddToHistory("Mood '" + args[0] + "' doesn't exist!");
 	}
+}
+
+void CommandManager::MoodVirus(std::vector<std::string>& args)
+{
+	if (!args.empty()) {
+		std::cout << "MoodVirus command does not accept any arguments." << std::endl;
+		Error("MoodVirus command does not accept any arguments.");
+		return;
+	}
+
+	m_virusActivated = !m_virusActivated;
 }
 
 void CommandManager::MoodList(std::vector<std::string>& args)

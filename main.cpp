@@ -1,7 +1,7 @@
 #include "Terminal.hpp"
 
 int main() {
-	Terminal terminal = Terminal();
+	Terminal terminal;
 	terminal.Run();
     
     return 0;
