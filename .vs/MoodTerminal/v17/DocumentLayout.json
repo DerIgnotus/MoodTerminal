@@ -3,16 +3,84 @@
   "WorkspaceRootPath": "H:\\C\u002B\u002B\\MoodTerminal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\Fireworks.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:Fireworks.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\Fireworks.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:Fireworks.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\AnimationManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:AnimationManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\AudioManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:AudioManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\AnimationManager.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:AnimationManager.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\CommandManager.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:CommandManager.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\Particle.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:Particle.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\TerminalRenderer.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:TerminalRenderer.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\Terminal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:Terminal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\MoodManager.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:MoodManager.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\TerminalRenderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:TerminalRenderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\Terminal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:Terminal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\Particle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:Particle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\MoodManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:MoodManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\InputHandler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:InputHandler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\CommandManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:CommandManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\History.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:History.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\InputHandler.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:InputHandler.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\TerminalState.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:TerminalState.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\Terminal.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:Terminal.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\Pong.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -23,66 +91,11 @@
       "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:Pong.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\InputHandler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:InputHandler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\InputHandler.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:InputHandler.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\Terminal.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:Terminal.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\TerminalRenderer.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:TerminalRenderer.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\MoodManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:MoodManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\MoodManager.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:MoodManager.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\History.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:History.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\AnimationManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:AnimationManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\History.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:History.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\CommandManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:CommandManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\AudioManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:AudioManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\vector||{3B902123-F8A7-4915-9F01-361F908088D0}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\CommandManager.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:CommandManager.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\AnimationManager.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:AnimationManager.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\memory||{3B902123-F8A7-4915-9F01-361F908088D0}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|H:\\C\u002B\u002B\\MoodTerminal\\TerminalState.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F072B72F-DD4B-4148-9006-C15E63DFD11E}|MoodTerminal.vcxproj|solutionrelative:TerminalState.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\xstring||{3B902123-F8A7-4915-9F01-361F908088D0}|"
@@ -99,7 +112,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -115,98 +128,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Pong.hpp",
-              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\Pong.hpp",
-              "RelativeDocumentMoniker": "Pong.hpp",
-              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\Pong.hpp",
-              "RelativeToolTip": "Pong.hpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAUwBoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Particle.hpp",
+              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\Particle.hpp",
+              "RelativeDocumentMoniker": "Particle.hpp",
+              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\Particle.hpp",
+              "RelativeToolTip": "Particle.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-15T20:55:13.673Z",
+              "WhenOpened": "2025-04-16T17:03:22.817Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "InputHandler.cpp",
-              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\InputHandler.cpp",
-              "RelativeDocumentMoniker": "InputHandler.cpp",
-              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\InputHandler.cpp",
-              "RelativeToolTip": "InputHandler.cpp",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAUwHsAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-11T19:23:42.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MoodManager.cpp",
-              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\MoodManager.cpp",
-              "RelativeDocumentMoniker": "MoodManager.cpp",
-              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\MoodManager.cpp",
-              "RelativeToolTip": "MoodManager.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-12T10:26:25.407Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MoodManager.hpp",
-              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\MoodManager.hpp",
-              "RelativeDocumentMoniker": "MoodManager.hpp",
-              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\MoodManager.hpp",
-              "RelativeToolTip": "MoodManager.hpp",
-              "ViewState": "AgIAACEAAAAAAAAAAAAiwEAAAAATAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Fireworks.hpp",
+              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\Fireworks.hpp",
+              "RelativeDocumentMoniker": "Fireworks.hpp",
+              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\Fireworks.hpp",
+              "RelativeToolTip": "Fireworks.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-12T10:22:08.563Z",
+              "WhenOpened": "2025-04-16T16:32:19.301Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Terminal.cpp",
               "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\Terminal.cpp",
               "RelativeDocumentMoniker": "Terminal.cpp",
               "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\Terminal.cpp",
               "RelativeToolTip": "Terminal.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACsAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-11T14:49:20.529Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TerminalRenderer.cpp",
-              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\TerminalRenderer.cpp",
-              "RelativeDocumentMoniker": "TerminalRenderer.cpp",
-              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\TerminalRenderer.cpp",
-              "RelativeToolTip": "TerminalRenderer.cpp",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAIwEcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-11T19:07:36.177Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Terminal.hpp",
-              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\Terminal.hpp",
-              "RelativeDocumentMoniker": "Terminal.hpp",
-              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\Terminal.hpp",
-              "RelativeToolTip": "Terminal.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-11T14:47:49.222Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "TerminalRenderer.hpp",
               "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\TerminalRenderer.hpp",
               "RelativeDocumentMoniker": "TerminalRenderer.hpp",
@@ -219,20 +180,215 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
+              "Title": "AnimationManager.cpp",
+              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\AnimationManager.cpp",
+              "RelativeDocumentMoniker": "AnimationManager.cpp",
+              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\AnimationManager.cpp",
+              "RelativeToolTip": "AnimationManager.cpp",
+              "ViewState": "AgIAAHIAAAAAAAAAAAArwIsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-12T14:38:30.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CommandManager.hpp",
+              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\CommandManager.hpp",
+              "RelativeDocumentMoniker": "CommandManager.hpp",
+              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\CommandManager.hpp",
+              "RelativeToolTip": "CommandManager.hpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAC0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-11T19:05:49.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AnimationManager.hpp",
+              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\AnimationManager.hpp",
+              "RelativeDocumentMoniker": "AnimationManager.hpp",
+              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\AnimationManager.hpp",
+              "RelativeToolTip": "AnimationManager.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-12T14:33:52.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Fireworks.cpp",
+              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\Fireworks.cpp",
+              "RelativeDocumentMoniker": "Fireworks.cpp",
+              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\Fireworks.cpp",
+              "RelativeToolTip": "Fireworks.cpp",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAiwGcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-16T16:33:47.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AudioManager.cpp",
+              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\AudioManager.cpp",
+              "RelativeDocumentMoniker": "AudioManager.cpp",
+              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\AudioManager.cpp",
+              "RelativeToolTip": "AudioManager.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-12T19:34:11.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MoodManager.hpp",
+              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\MoodManager.hpp",
+              "RelativeDocumentMoniker": "MoodManager.hpp",
+              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\MoodManager.hpp",
+              "RelativeToolTip": "MoodManager.hpp",
+              "ViewState": "AgIAACEAAAAAAAAAAAAiwD0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-12T10:22:08.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "InputHandler.cpp",
+              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\InputHandler.cpp",
+              "RelativeDocumentMoniker": "InputHandler.cpp",
+              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\InputHandler.cpp",
+              "RelativeToolTip": "InputHandler.cpp",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAUwHsAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-11T19:23:42.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MoodManager.cpp",
+              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\MoodManager.cpp",
+              "RelativeDocumentMoniker": "MoodManager.cpp",
+              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\MoodManager.cpp",
+              "RelativeToolTip": "MoodManager.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-12T10:26:25.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Particle.cpp",
+              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\Particle.cpp",
+              "RelativeDocumentMoniker": "Particle.cpp",
+              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\Particle.cpp",
+              "RelativeToolTip": "Particle.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-16T17:05:36.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TerminalRenderer.cpp",
+              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\TerminalRenderer.cpp",
+              "RelativeDocumentMoniker": "TerminalRenderer.cpp",
+              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\TerminalRenderer.cpp",
+              "RelativeToolTip": "TerminalRenderer.cpp",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-11T19:07:36.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Terminal.hpp",
+              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\Terminal.hpp",
+              "RelativeDocumentMoniker": "Terminal.hpp",
+              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\Terminal.hpp",
+              "RelativeToolTip": "Terminal.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-11T14:47:49.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CommandManager.cpp",
+              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\CommandManager.cpp",
+              "RelativeDocumentMoniker": "CommandManager.cpp",
+              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\CommandManager.cpp",
+              "RelativeToolTip": "CommandManager.cpp",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAUwA0BAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-11T19:27:32.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TerminalState.hpp",
+              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\TerminalState.hpp",
+              "RelativeDocumentMoniker": "TerminalState.hpp",
+              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\TerminalState.hpp",
+              "RelativeToolTip": "TerminalState.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-14T16:19:11.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "InputHandler.hpp",
               "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\InputHandler.hpp",
               "RelativeDocumentMoniker": "InputHandler.hpp",
               "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\InputHandler.hpp",
               "RelativeToolTip": "InputHandler.hpp",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAnwBMAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-11T19:05:35.655Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 15,
+              "Title": "History.hpp",
+              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\History.hpp",
+              "RelativeDocumentMoniker": "History.hpp",
+              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\History.hpp",
+              "RelativeToolTip": "History.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-11T19:06:00.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Pong.hpp",
+              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\Pong.hpp",
+              "RelativeDocumentMoniker": "Pong.hpp",
+              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\Pong.hpp",
+              "RelativeToolTip": "Pong.hpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAUwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-15T20:55:13.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "main.cpp",
               "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
@@ -245,7 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 21,
               "Title": "Pong.cpp",
               "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\Pong.cpp",
               "RelativeDocumentMoniker": "Pong.cpp",
@@ -258,19 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "History.hpp",
-              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\History.hpp",
-              "RelativeDocumentMoniker": "History.hpp",
-              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\History.hpp",
-              "RelativeToolTip": "History.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-11T19:06:00.237Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 22,
               "Title": "History.cpp",
               "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\History.cpp",
               "RelativeDocumentMoniker": "History.cpp",
@@ -278,113 +422,34 @@
               "RelativeToolTip": "History.cpp",
               "ViewState": "AgIAAAIAAAAAAAAAAAAUwBMAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-11T19:28:51.379Z"
+              "WhenOpened": "2025-04-11T19:28:51.379Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AnimationManager.cpp",
-              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\AnimationManager.cpp",
-              "RelativeDocumentMoniker": "AnimationManager.cpp",
-              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\AnimationManager.cpp",
-              "RelativeToolTip": "AnimationManager.cpp",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAIwGEAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-12T14:38:30.868Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AudioManager.cpp",
-              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\AudioManager.cpp",
-              "RelativeDocumentMoniker": "AudioManager.cpp",
-              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\AudioManager.cpp",
-              "RelativeToolTip": "AudioManager.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-12T19:34:11.379Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CommandManager.cpp",
-              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\CommandManager.cpp",
-              "RelativeDocumentMoniker": "CommandManager.cpp",
-              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\CommandManager.cpp",
-              "RelativeToolTip": "CommandManager.cpp",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAnwJwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-11T19:27:32.498Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CommandManager.hpp",
-              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\CommandManager.hpp",
-              "RelativeDocumentMoniker": "CommandManager.hpp",
-              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\CommandManager.hpp",
-              "RelativeToolTip": "CommandManager.hpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-11T19:05:49.763Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "vector",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\vector",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\vector",
-              "ViewState": "AgIAAHEHAAAAAAAAAAAmwIMHAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-04-15T17:03:10.559Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AnimationManager.hpp",
-              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\AnimationManager.hpp",
-              "RelativeDocumentMoniker": "AnimationManager.hpp",
-              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\AnimationManager.hpp",
-              "RelativeToolTip": "AnimationManager.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-12T14:33:52.695Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "memory",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\memory",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\memory",
               "ViewState": "AgIAAPYNAAAAAAAAAAAIwAoOAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-04-13T10:57:21.408Z"
+              "WhenOpened": "2025-04-13T10:57:21.408Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "TerminalState.hpp",
-              "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\TerminalState.hpp",
-              "RelativeDocumentMoniker": "TerminalState.hpp",
-              "ToolTip": "H:\\C\u002B\u002B\\MoodTerminal\\TerminalState.hpp",
-              "RelativeToolTip": "TerminalState.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-14T16:19:11.358Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "xstring",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\xstring",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\xstring",
               "ViewState": "AgIAALICAAAAAAAAAAAmwLUCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-04-13T10:48:16.07Z"
+              "WhenOpened": "2025-04-13T10:48:16.07Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "AudioManager.hpp",
               "DocumentMoniker": "H:\\C\u002B\u002B\\MoodTerminal\\AudioManager.hpp",
               "RelativeDocumentMoniker": "AudioManager.hpp",
@@ -392,7 +457,8 @@
               "RelativeToolTip": "AudioManager.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-12T15:48:09.418Z"
+              "WhenOpened": "2025-04-12T15:48:09.418Z",
+              "EditorCaption": ""
             }
           ]
         }

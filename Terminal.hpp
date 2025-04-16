@@ -12,6 +12,7 @@
 #include "AudioManager.hpp"
 #include "TerminalState.hpp"
 #include "Pong.hpp"
+#include "Fireworks.hpp"
 
 class Terminal
 {
@@ -24,6 +25,7 @@ private:
 
 	sf::RenderWindow m_window;	
 
+	std::unique_ptr<Fireworks> m_fireworks;
 	std::unique_ptr<Pong> m_pongGame;
 	std::unique_ptr<AudioManager> m_audioManager;
 	std::unique_ptr<MoodManager> m_moodManager;

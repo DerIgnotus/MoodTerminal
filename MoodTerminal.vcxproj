@@ -150,10 +150,12 @@
     <ClCompile Include="AnimationManager.cpp" />
     <ClCompile Include="AudioManager.cpp" />
     <ClCompile Include="CommandManager.cpp" />
+    <ClCompile Include="Fireworks.cpp" />
     <ClCompile Include="History.cpp" />
     <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MoodManager.cpp" />
+    <ClCompile Include="Particle.cpp" />
     <ClCompile Include="Pong.cpp" />
     <ClCompile Include="Terminal.cpp" />
     <ClCompile Include="TerminalRenderer.cpp" />
@@ -197,9 +199,11 @@
     <ClInclude Include="AnimationManager.hpp" />
     <ClInclude Include="AudioManager.hpp" />
     <ClInclude Include="CommandManager.hpp" />
+    <ClInclude Include="Fireworks.hpp" />
     <ClInclude Include="History.hpp" />
     <ClInclude Include="InputHandler.hpp" />
     <ClInclude Include="MoodManager.hpp" />
+    <ClInclude Include="Particle.hpp" />
     <ClInclude Include="Pong.hpp" />
     <ClInclude Include="Terminal.hpp" />
     <ClInclude Include="TerminalRenderer.hpp" />

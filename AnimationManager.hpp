@@ -7,14 +7,16 @@
 
 #include "TerminalState.hpp"
 #include "MoodManager.hpp"
+#include "Fireworks.hpp"
 
 class AnimationManager
 {
 public:
-	AnimationManager(sf::RenderWindow& window, TerminalState& terminalState, MoodManager& moodManager);
+	AnimationManager(sf::RenderWindow& window, TerminalState& terminalState, MoodManager& moodManager, Fireworks& fireworks);
 	void StartBootUpAnimation();
 	void StartClearScreenAnimation();
 	void StartAsciiWaveAnimation();
+	void StartFireworksAnimation();
 	void Update();
 
 private:
@@ -22,6 +24,7 @@ private:
 	TerminalState& m_terminalState;
 
 	MoodManager& m_moodManager;
+	Fireworks& m_fireworks;
 
 	std::string m_activeAnimation;
 
@@ -49,5 +52,6 @@ private:
 	void DrawAsciiWave(float time);
 	void UpdateBootUpAnimation();
 	void UpdateClearScreenAnimation();
+	void UpdateFireworksAnimation();
 };
 

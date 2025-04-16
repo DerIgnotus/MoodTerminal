@@ -43,6 +43,7 @@ private:
 	void Time(std::vector<std::string>& args);
 	void Pong(std::vector<std::string>& args);
 	void AsciiWave(std::vector<std::string>& args);
+	void Fireworks(std::vector<std::string>& args);
 
 	void Error(const std::string& message);
 };

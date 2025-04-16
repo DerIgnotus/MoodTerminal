@@ -29,6 +29,9 @@ CommandManager::CommandManager(History& historyManager, MoodManager& moodManager
 
 	m_commands.push_back("asciiwave");
 	m_commandDescriptions.push_back("Starts the ASCII wave animation.");
+
+	m_commands.push_back("fireworks");
+	m_commandDescriptions.push_back("Starts the fireworks animation.");
 }
 
 void CommandManager::ExecuteCommand(const std::string& command)
@@ -69,6 +72,9 @@ void CommandManager::ExecuteCommand(const std::string& command)
 	}
 	else if (mainCommand == "asciiwave") {
 		AsciiWave(arguments);
+	}
+	else if (mainCommand == "fireworks") {
+		Fireworks(arguments);
 	}
 	else {
 		Error("Unknown command: " + mainCommand);
@@ -251,6 +257,17 @@ void CommandManager::AsciiWave(std::vector<std::string>& args)
 	}
 
 	m_animationManager.StartAsciiWaveAnimation();
+}
+
+void CommandManager::Fireworks(std::vector<std::string>& args)
+{
+	if (!args.empty()) {
+		std::cout << "Fireworks command does not accept any arguments." << std::endl;
+		Error("Fireworks command does not accept any arguments.");
+		return;
+	}
+
+	m_animationManager.StartFireworksAnimation();
 }
 
 void CommandManager::Error(const std::string& message)

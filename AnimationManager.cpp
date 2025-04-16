@@ -1,7 +1,7 @@
 ﻿#include "AnimationManager.hpp"
 
-AnimationManager::AnimationManager(sf::RenderWindow& window, TerminalState& terminalState, MoodManager& moodManager) 
-	: m_window(window), m_terminalState(terminalState), m_moodManager(moodManager)
+AnimationManager::AnimationManager(sf::RenderWindow& window, TerminalState& terminalState, MoodManager& moodManager, Fireworks& fireworks) 
+	: m_window(window), m_terminalState(terminalState), m_moodManager(moodManager), m_fireworks(fireworks)
 {
     m_font.loadFromFile("Assets/Fonts/consolas.ttf");
     if (!m_font.loadFromFile("Assets/Fonts/consolas.ttf")) {
@@ -44,6 +44,12 @@ void AnimationManager::StartAsciiWaveAnimation()
 	m_activeAnimation = "ascii_wave";
 }
 
+void AnimationManager::StartFireworksAnimation()
+{
+	m_terminalState = TerminalState::ANIMATION;
+	m_activeAnimation = "fireworks";
+}
+
 void AnimationManager::Update()
 {
 	m_window.clear(m_moodManager.GetBackgroundColor()); 
@@ -57,6 +63,9 @@ void AnimationManager::Update()
     else if (m_activeAnimation == "ascii_wave") {
 		float time = m_asciiWaveClock.getElapsedTime().asSeconds();
 		DrawAsciiWave(time);
+    }
+    else if (m_activeAnimation == "fireworks") {
+		UpdateFireworksAnimation();
     }
 
     m_window.display();
@@ -124,6 +133,11 @@ void AnimationManager::UpdateClearScreenAnimation()
 
         m_clearMask.clear();
     }
+}
+
+void AnimationManager::UpdateFireworksAnimation()
+{
+	m_fireworks.Update(m_moodManager.GetTextColor());
 }
 
 void AnimationManager::DrawAsciiWave(float time) {
